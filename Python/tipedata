@@ -1,0 +1,58 @@
+>>> print(x + " koding")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> x = sekolah
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sekolah' is not defined
+>>> x = 'sekolah'
+>>> print(x + " koding")
+sekolah koding
+>>> x = 'wahyu' y = 'adi'
+  File "<stdin>", line 1
+    x = 'wahyu' y = 'adi'
+                ^
+SyntaxError: invalid syntax
+>>> x = 'wahyu' 
+>>> y = 'adi'
+>>> print(x+' '+y)
+wahyu adi
+>>> print("maka dia berkata \"hai\"")
+maka dia berkata "hai"
+>>> print('bari satu \n baris dua ')
+bari satu 
+ baris dua 
+>>> print('bari satu \t baris dua ')
+bari satu        baris dua 
+>>> python string method
+  File "<stdin>", line 1
+    python string method
+           ^
+SyntaxError: invalid syntax
+>>> x = 'wauptura'
+>>> x.capitalize()
+'Wauptura'
+>>> x.replace("wau","wahyu")
+'wahyuptura'
+>>> x = 20
+>>> y = 30
+>>> print (x*y)
+600
+>>> max(x,y)
+30
+>>> min(x,y)
+20
+>>> round(9.7)
+10
+>>> harga = 2500
+>>> print('Total harganya',harga)
+Total harganya 2500
+>>> print('Total harganya'+str(harga))
+Total harganya2500
+>>> print('Total harganya '+str(harga))
+Total harganya 2500
+>>> harga2 = '2500'
+>>> print('Total harganya '+int(harga))
+Traceback (most recent call last):
+

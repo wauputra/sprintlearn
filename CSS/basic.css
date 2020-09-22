@@ -1,0 +1,239 @@
+/* selector */
+
+/* ========= SELECTOR ============ */
+#menu_web{
+    background: yellow;
+}
+
+.menu{
+    font-size: 15px;
+}
+
+h1{
+    color: antiquewhite;
+    text-decoration: underline;
+}
+
+/* ========= PROPERTY ============ */
+body{
+    /* background-color: #dfdfdf; */
+    /* background-color: gray; */
+    background-color: rgb(255, 0, 0);
+}
+
+/* ========= BACKGROUND IMAGE ============ */
+body{
+    background-image: url('gambar/koding.png');
+    background-repeat: no-repeat;
+    /* background attachment : gambarnya gak bergerak saat di scroll*/
+    background-attachment: fixed;
+    /* background position : posisinya */
+    background-position: right;
+
+    /* opsi lain dalam satu baris*/
+    background: #dfdfdf url('gambar/koding.png') no-repeat fixed right;
+}
+
+/* ========= FONT ============ */
+body{
+    font-size: 24px;
+    /* jenis tulisan */
+    font-family: sans-serif;
+    /* ketebalan */
+    font-weight: bold;
+}
+
+/* ========= KONDISI LINK ============ */
+/* biasa */
+.menu:link{
+    background-color: green;
+}
+/* sudah dikunjungi */
+.menu:visited{
+    background-color: red;
+}
+/* sedang dihover */
+.menu:hover{
+    background-color: yellowgreen;
+}
+/* sedang diklik */
+.menu:active{
+    background-color: gray;
+}
+
+/* ========= DIMENSI ELEMEN ============ */
+#text-pendek{
+    /* lebar */
+    width: 300px;
+    /* persen */
+    width: 50%;
+    background: green;
+    height: 200px;
+    max-width: 700px;
+    min-height: 100px;
+}
+
+/* ========= DISPLAY ============ */
+/* inline : dalam satu garis */
+/* block: ngambil lebar selebar browsernya */
+/* https://learnwebtoday.com/css-interview-questions-and-answers-part-5-element-styling-selectors/ */
+
+h1{
+    display: inline;
+    /* mulai dari garis */
+    /* tidak bisa diatur lebar dan tinggi */
+}
+
+a{
+    display: block;
+    /* mengikuti browser */
+    /* boleh punya tinggi dan lebar */
+}
+
+.menu{
+    height: 100px;
+    width: 100px;
+    /* inline-block : numpuk seperti inline tapi punya tinggi */
+    display: inline-block;
+}
+
+/* ========= MENGHILANGKAN ELEMEN ============ */
+#text-pendek{
+    /* hidden = tempatnya masih ada */
+    visibility: hidden;
+    /* none =  hapus element*/
+    visibility: none;
+}
+
+/* ========= BOX MODEL dan MARGIN ============ */
+/* margin = jarak luar */
+/* padding = jarak dalam */
+/* border = garis element */
+
+*{
+    /* semua jarak jadi 0 */
+    margin: 0px;
+}
+
+#menu_wrap{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    /* margin : atas right bottom left = searah jarum jam */
+    margin: 10px 0 50px 0;
+}
+
+/* ========= PADDING dan BORDER ============ */
+
+.menu{
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    /* satu baris */
+    border: 2px solid black;
+    /* padding : top right bottom left */
+    /* padding : atas-bawah kiri-kanan */
+    /* padding : semua */
+    padding: 1px 2px 3px 4px;
+}
+
+/* ========= POSITION RELATIV dan STATIS  ============ */
+
+/* STATIC = default, tidak ada perubahan sama sekali */
+/* RELATIVE = bisa atur posisinya : top, right, bottom, left tidak mempengaruhi element lainya*/
+/* ABSOLUTE = boleh top, right, bottom, left tapi mempengaruhi elemen lainnya, menganggap elemen itu hilang, saat discrool ngikut*/
+/* FIXED =  seperti absolute tapi saat discrool gak ngaruh/diam dtiempat*/
+
+#menu_member{
+    position: relative;
+    top: 5px;
+}
+
+#h2_member{
+    background: yellow;
+    position: absolute;
+}
+
+
+/* ========= PARENT ELEMENT  ============ */
+/* pembungkus dari element, ex : div */
+
+/* POSISI ABSOLUTE TERGANTUNG PARENT ELEMENT */
+.parent{
+    position: absolut;
+}
+/* POSISI RELATIVE TERGANTUNG BROWSER  */
+/* POSISI FIXED TIDAK TERGANTNG DENGAN PARENT */
+
+
+/* ========= INDEX / Z-INDEX ============ */
+/* POSISI ATAS/BELAKANG DLL */
+.atas{
+    z-index: 1000;
+}
+
+.tenggelam{
+    z-index: -1;
+}
+
+/* =========== FLOAT & CLEAR ============== */
+/* Float = Cara bikin elemen agar elemen berikutnya mengikuti */
+/* sifat float : setiap ada yg kosong maka dia langsung isi */
+/* Penting untuk mengatur layout */
+/* Menghilangkan element Float */
+
+/* akan melebar kesamping kanaan */
+.contoh-float{
+    float: right;
+    margin-right: 20px;
+}
+
+/* Menghilangkan efek float ke elemen berikutnya */
+.div_clear{
+    clear: both;
+}
+
+/* =========== SELECTOR BAGIAN KE 2 ============== */
+/* https://www.w3schools.com/cssref/css_selectors.asp */
+
+/* Memilih beberapa element */
+h1,h2{
+    color: grey;
+}
+
+/* memeilih element dibawahnya */
+div a{
+    background: yellow;
+}
+
+/* Memilih langsung dibawah pembungkusnya */
+div>a{
+    background: green;
+}
+
+/* Memilih elemen setelah element tertentu */
+p + div{ /* artinya = memilih Tag Div setelah tag P*/
+    background: aqua;
+}
+
+/* Tilda = Memilih semua bagian yg ada dibawahnya */
+div ~ p{
+    /* Yg terkena hanya yg ada dibagian bawahnya = semua tag P akan merah kecuali yang sebelumnya ada tag Div */
+    background: red; 
+}
+
+
+/* =========== HOVER dan Focus ============== */
+/* hover : ketika mouser ke arah element */
+h1:hover{
+    font-size: 30px;
+}
+/* Jika h2 di hover maka tidak berefect */
+h1:hover + h2{
+    font-size: 12px;
+}
+
+/* Focus : keadaan ketika input diklik */
+input:focus, textarea:focus{
+    background: yellow;
+}

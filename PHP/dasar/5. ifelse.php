@@ -40,6 +40,48 @@
         }else{
             echo 'Engga cukup';
         }
+        //operator && atau ||
+        // && = keduanya harus memenuhi kondisi
+        echo "<br><br>";
+        if($uang_programmer > $keyboard
+            || $uang_designer >$keyboard
+        )
+        {
+            echo "boleh beli keyboard";
+        }else{
+            echo "engga boleh beli keyboard";
+        }        
+        echo "<br><br>";
+        if($uang_programmer > $keyboard
+            && $uang_designer >$keyboard
+        )
+        {
+            echo "boleh beli keyboard";
+        }else{
+            echo "engga boleh beli keyboard";
+        }
+        //switch case
+        //menguji nilai terhadap banyak kondisi
+        // switch (apaygmaudiuji) { case 'tesvalue' default  }
+        echo "<br><br>";
+        $namaku = "wauputra1";
+        switch ($namaku) {
+            case 'wahyu':
+                echo 'Namanya Wahyu';
+                break;
+            case 'adi': 
+                echo 'Namanya Adi';
+                break;
+            case 'putra': 
+                echo 'Namanya Putra';
+                break;
+            case 'wauputra': 
+                echo 'Namanya Wauputra';
+                break;
+            default:
+                echo 'Tidak diketahui';
+                break;
+        }
     ?>
 </body>
 </html>

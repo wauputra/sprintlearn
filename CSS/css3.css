@@ -1,0 +1,125 @@
+/* css3 adalah CSS versi baru */
+/* Tidak semua property didukung oleh browser jadi gunakan caniuse.com */
+
+/* =================== BORDER RADIUS =================== */
+/* Untuk mengatur radius sisi element */
+#box{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: aqua;
+    /* spesifik */
+    /* border-top-left-radius: 10px; */
+}
+
+#box2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: greenyellow;
+}
+
+/* =================== BOX SHADOW =================== */
+#box3{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: yellow;
+    /* box-shadow: horizontal vertical blur nyebar warna; */
+    box-shadow: 5px 0px 50px 0.1px black;
+}
+
+/* =================== BOX SIZING =================== */
+/* box sizing : Mengatur cangkupan lebar suatu element */
+/* Vendor prefix : Memberitahu browser untuk yg belum support CSS 3 */
+
+#box4{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: blue;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box; /* Lebarnya adalah patokan utamanya */
+    /* Safari dan Chrome */
+    -webkit- box-sizing: border-box;
+    /* Mozila */
+    -moz- box-sizing: border-box;
+    /* Opera */
+    -o- box-sizing: border-box;
+    /* Internet Explorer */
+    -ms- box-sizing: border-box;
+}
+
+#box5{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: green;
+}
+
+
+/* =================== Text Shadow =================== */
+/* Buat bayangan pada tulisan */
+
+#text1{
+    /* text-shadow: horizontal vertical blur warna; */
+    text-shadow: 5px 5px 10px grey;
+}
+
+
+/* =================== WORD WRAP dan TEXT OVERFLOW =================== */
+/* World Wrap = cara bungkus kata kata */
+
+#div1{
+    width: 50px;
+    /* overflow hidden = yg lebih dari 50 px bakal disembunyiin */
+    overflow: hidden; 
+    /* overflow: scroll;  */
+
+    /* kasih tau klo masih ada sambungannya */
+    /* nampilin semua kata katanya */
+    word-wrap: break-word;
+}
+
+
+/* =================== TRANSFORM TRANSLATE dan ROTATE =================== */
+/* Transform */
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: translate(50px,100px);
+}
+
+/* Rotate */
+#div3{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transform: rotate(30deg);
+}
+
+
+/* =================== TRANSFORM SCALE dan SKEW =================== */
+/* Scale ubah Ukurannya  */
+#div4{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    /* transform: scale(x,y); */
+    transform: scale(2.5,0.25);
+}
+
+/* Scew ubah sisi sisinya */
+#div5{
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+    /* transform: scale(x,y); */
+    transform: skewX(10deg);
+    transform: skewY(10deg);
+}
+
+
+/* =================== TRANSITION =================== */
