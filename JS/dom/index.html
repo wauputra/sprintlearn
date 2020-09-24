@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript</title>
+    <style>
+        .merah{
+            background: red;
+        }
+        .border-hitam{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar DOM</h1>
+    <img src="image/robot.png" alt="robot" width="200px" height="200px" id="gambar" class="border-hitam">
+    <input type="text" id="input" value="nama">
+    <div id="box1">
+        <div id="p1">paragraf1</div>
+    </div>
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        // ======================== SELECTOR ========================
+        // memilih id
+        document.getElementById('box1').append = 'hello, this is wauputra';
+        // memilih class
+        var boxes = document.getElementsByClassName('boxes');
+        boxes[0].innerHTML = "versi baru";    
+        boxes[1].innerHTML = "versi baru 1";    
+        boxes[2].innerHTML = "versi baru 2";  
+        // memilih berdasarkan tag, mirip dengan class, lebih dari satu
+        var elLi = document.getElementsByTagName("li");
+        elLi[0].innerHTML = "PHP"; 
+        elLi[1].innerHTML = "SASS";  
+        elLi[2].innerHTML = "Jquery";  
+        
+        
+        // ======================== TAMBAH, HAPUS, EDIT ========================
+        // tambah element
+        var el = document.createElement('h2');
+        var text = document.createTextNode('Ini adalah text');
+        var box = document.getElementById('box1');
+
+        el.appendChild(text);
+        box.appendChild(el);
+
+        // hapus element
+        box.removeChild(el);
+
+        // edit element
+        // tampung dulu perubahananya
+        var el2 = document.createElement('h2');
+        var text2 = document.createTextNode('belajar sekarang!');
+
+        el2.appendChild(text2);
+        var p1 = document.getElementById('p1');
+        console.log(p1);
+        // replcae element : replaceChild(elementBaru,elementLama)
+        box.replaceChild(el2,p1);
+
+
+        // ======================== UBAH, TAMBAH ATTRIBUT ========================
+        var img = document.getElementById('gambar');
+        img.width = 250;
+
+        var input = document.getElementById('input');
+        input.value="nama lengkap";
+
+        // nambahin kelas
+        img.setAttribute('class','merah');
+
+
+        // ======================== MANIPULASI CSS ========================
+        // Nambahin kelas sama seperti setAttribute
+        img.className += ' border-hitam';
+        // ubah css inline
+        input.style.border = "2px solid blue";
+        input.style.backgroundColor = "yellow";     
+
+    </script>
+</body>
+</html>

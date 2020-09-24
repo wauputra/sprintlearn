@@ -31,8 +31,22 @@ print('Ini diakses dari luar : '+name)
 
 # ========== RAISE ==========
 # untuk debug 
+# cara untuk mencari kesaalahan
+
+    # raise Exception('ada yg salah nih')
 
 try:
-    raise Exception('ada yg salah nih')
+    print(j+g)
 except:
     print('keknya ada yg salah nih')
+
+import sys
+def is_it_linux():
+    # fungsi ini hanya untuk linux
+    assert('Linux' in sys.platform),'Fungsi ini hanya untuk Linux'
+
+is_it_linux()
+print('finish is_it_linux(), os ini adalah '.sys.platform)
+
+
+
